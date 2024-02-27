@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+#dunk {
+	width:2000px;
+		height:100000px;
+		background-color: goldenrod;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		font-size:100000px;
+			}
+		
+
+	 </style>
+	</head>
+
+<body>
+
+	<div id="dunk">
+	</div>
+
+	<script> 
+var dunktype = ["360 Windmill","Cradle", "360"];
+
+var dunks = ["url(https://i.pinimg.com/originals/e9/59/ca/e959ca1ed7872679912b6a81bb2e8c82.gif)", "url(https://24.media.tumblr.com/tumblr_m7f1mp2iu81rxudv9o1_500.gif)", "url(https://i.imgur.com/BW98958.gif)",];
+
+
+function randomNumber() {
+        return Math.floor(Math.random() * 2);
+
+    }
+
+        var dunk = document.getElementById('dunk');
+
+        document.addEventListener("click", function() {
+            var x = randomNumber();
+            console.log(x);
+            hello.innerText = dunktype[x];
+            country.style.backgroundImage = place[x];
+
+        })
+
+    </script>
+
+     
+</body>
+
+</html>
+	
+	
+	

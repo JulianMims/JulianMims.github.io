@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    Use the arrow keys to move the car, and click the car for a surprise!!!
+    <title></title>
+    <style type="text/css">
+        #car {
+            position: absolute;
+            width:700px;
+            height:700px;
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-image:url(https://data.3dtuning.com/tun/jVVzEVyMy.jpg);
+        }
+
+        #hiddenImage {
+            display: none;
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://i.pinimg.com/originals/59/87/eb/5987eb0ef1dc3b3ba0492a82808d8177.gif);
+        }
+    </style>
+</head>
+<body>
+    <div id="car"></div>
+    <div id="hiddenImage"></div>
+    <script type="text/javascript">
+        var x = 0;
+        var y = 0;
+
+        document.addEventListener("keydown", function (event) {
+            console.log(event.key);
+
+            if (event.key == "ArrowUp") {
+                y = y - 10;
+                car.style.top = y + "px";
+                console.log(y);
+            }
+
+            if (event.key == "ArrowDown") {
+                y = y + 10;
+                car.style.top = y + "px";
+                console.log(y);
+            }
+
+            if (event.key == "ArrowRight") {
+                x = x + 10;
+                car.style.left = x + "px";
+                console.log(x);
+            }
+
+            if (event.key == "ArrowLeft") {
+                x = x - 10;
+                car.style.left = x + "px";
+                console.log(x);
+            }
+        });
+
+      
+        document.getElementById("car").addEventListener("click", function () {
+            var hiddenImage = document.getElementById("hiddenImage");
+            hiddenImage.style.display = (hiddenImage.style.display === "none") ? "block" : "none";
+        });
+    </script>
+</body>
+</html>

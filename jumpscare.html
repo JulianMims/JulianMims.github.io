@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #movingImage {
+      position: absolute;
+      top: 50px;
+      left: 550px;
+      width: 100px;
+      height: 100px;
+      z-index:0;
+
+    }
+
+    
+  </style>
+</head>
+<body>
+  <img id="movingImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/768px-Basketball_Clipart.svg.png" alt="Moving Image">
+  
+  <script>
+    const movingImage = document.getElementById("movingImage");
+    let currentPosition = 50; 
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "q") {
+        currentPosition -= 10
+        movingImage.style.left = currentPosition + "px";
+      } else if (event.key === "e") {
+        currentPosition += 10
+        movingImage.style.left = currentPosition + "px";
+      }
+    })
+    document.addEventListener("click", function(){
+      mask.style.opacity = "100"
+
+    })
+  </script>
+  <style type="text/css">
+    
+    #Basket{
+    width:500px;
+    height:500px;
+    z-index:-10;
+    
+    background-image:url(https://nationalsportsproducts.com/media/2018/04/39161.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+
+
+
+
+  }
+
+
+
+  #mask{
+    width:1000px;
+    height:1000px;
+    background-size:cover;
+    position:absolute;
+    background-image:url(https://sportschump.net/wp-content/uploads/2011/10/basketball-mask.jpg);
+    opacity:0;
+    top:0px;
+    right:500px;
+  }
+  </style>
+
+</body>
+press q and e to move the ball, click to make the ball go down
+</html>
+<div id="mask"></div>
+<div id="Basket"></div>

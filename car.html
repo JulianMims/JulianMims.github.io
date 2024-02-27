@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+
+
+</body>
+</html>
+
+<style type="text/css">
+	#car{
+		position:absolute; 
+		width: 500px;
+		height: 500px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image:url(https://d1i1eo6qmdfmdv.cloudfront.net/upload/site/models/ferrari_488_pista/ferrari-488-pista-main.png);
+	}	
+</style>
+</head>
+<body>
+	<div id="car"></div>
+	<script type="text/javascript">
+
+		var x =0
+		var y =0
+	document.addEventListener("keydown",function
+	(event){
+
+		console.log(event.key)
+		if (event.key == "ArrowUp"){
+			y = y-10;
+			car.style.top = y+"px"
+			console.log(y)
+		}
+		console.log(event.key)
+		if (event.key == "ArrowDown"){
+			y = y+10;
+			car.style.top = y+"px"
+			console.log(y)
+		}
+
+		console.log(event.key)
+		if (event.key == "ArrowRight") {
+			x = x+10;
+			car.style.left = x+"px"
+			console.log(x)
+		}
+
+		console.log(event.key)
+		if (event.key == "ArrowLeft"){
+			x = x-10;
+			car.style.left = x+"px"
+			console.log(x)
+		}
+
+	})
+</script>
+</body>
+	
